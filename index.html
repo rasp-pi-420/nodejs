@@ -7,11 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/execute-code" method="post">
+    
         <textarea id="w3review" name="code" rows="4" cols="50"></textarea>
         <br>
-        <input type="submit" value="Execute">
-        
-    </form>
+        <button onClick='myFunction()'>Execute</button>
+        <script>
+            function myFunction() {
+                fetch("https://2q6673-3000.csb.app/execute-code?code="+document.getElementById("w3review").value)
+            }
+        </script>
 </body>
 </html>
